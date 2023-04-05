@@ -46,11 +46,9 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 
-## reference links 
-icone:
+## Design used
+ - **Material UI**: https://mui.com
+ - **Material Icons**: https://mui.com/material-ui/material-icons/
 
- - https://mui.com/material-ui/material-icons/?query=search+
- - https://freeicons.io/
-
-db:
- - https://console.firebase.google.com/u/0/project/my-linkedin-clone-985b6/settings/general/web:NDRmNjFjNzgtZDI1ZS00OTg1LWEyZmUtNDZlMjNiODE4ZDE2?nonce=1680704818411
+## Platform used
+- **Fairbase**: https://firebase.google.com

@@ -8,7 +8,7 @@ function App() {
       {/* Header */}
       <Header />
 
-
+      {/* App Body */}
       {/* Sidebar */}
       {/* Feed */}
       {/* Widget */}
