@@ -52,3 +52,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Platform used
 - **Fairbase**: https://firebase.google.com
+
+
+*that's pretty cool looks pretty clean*
