@@ -2,6 +2,7 @@
     position: sticky; /*a differenza di fixed, quando scorriamo la pagina la sua posizione rimane fissa rispetto allo scorrimento*/
     top: 0;
     display: flex;
+    background-color: white;
     justify-content: space-evenly;
     border-bottom: 0.1px solid lightgray;
     padding-top: 10px;
