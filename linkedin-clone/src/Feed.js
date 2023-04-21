@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import './Feed.css'
-import InputOption from './InputOption'
+import React, { useEffect, useState } from 'react';
+import './Feed.css';
+import InputOption from './InputOption';
 import Post from './Post';
 
+/*FlipMove*/
+import FlipMove from "react-flip-move";
 
 /*Material UI Icons */
 import CreateIcon from '@mui/icons-material/Create';
@@ -14,8 +16,11 @@ import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 //Firebase
 import { db } from './firebase';
 import firebase from 'firebase/compat/app';
+import { useSelector } from 'react-redux';
+import { selectUser } from './features/userSlice';
 
 function Feed() {
+    const user = useSelector(selectUser);
     const [input, setInput] = useState("");
     const [posts, setPosts] = useState([]); //da importare
 
@@ -37,10 +42,10 @@ function Feed() {
     const sendPost = (e) => {
         e.preventDefault();
         db.collection('posts').add({
-            name: 'Federico Conti',
-            description: 'this a test',
+            name: user.displayName,
+            description: user.email,
             message: input,
-            photoUrl: '',
+            photoUrl: user.photoURL || "",
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
         });
         setInput("");
@@ -70,22 +75,19 @@ function Feed() {
             </div>
 
             {/*Posts*/}
-            {posts.map(({ id, data: { name, description, message, photoUrl } }) =>
-                <Post
-                    key={id}
-                    name={name}
-                    description={description}
-                    message={message}
-                    photoUrl={photoUrl}
-                />
-            )}
-
-            {/* <Post name='Federico Conti'
-            description='Thi is a test'
-            message="Yes that's pretty cool, man  that's look so clean !!" /> */}
-
+            <FlipMove>
+                {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
+                    <Post
+                        key={id}
+                        name={name}
+                        description={description}
+                        message={message}
+                        photoUrl={photoUrl}
+                    />
+                ))}
+            </FlipMove>
         </div>
-    )
+    );
 }
 
 export default Feed

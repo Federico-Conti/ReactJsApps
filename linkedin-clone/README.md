@@ -45,13 +45,11 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-
 ## Design used
- - **Material UI**: https://mui.com
  - **Material Icons**: https://mui.com/material-ui/material-icons/
+ - **Flip move**: https://github.com/joshwcomeau/react-flip-move (npm add react-flip-move)
 
 ## Platform used
 - **Fairbase**: https://firebase.google.com
-
 
 *that's pretty cool looks pretty clean*
