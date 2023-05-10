@@ -32,7 +32,7 @@ function Feed() {
                 setPosts(
                     snapshot.docs.map((doc) => ({
                         id: doc.id,
-                        data: doc.data()
+                        data: doc.data(),
                     }))
                 )
             );
@@ -45,7 +45,7 @@ function Feed() {
             name: user.displayName,
             description: user.email,
             message: input,
-            photoUrl: user.photoURL || "",
+            photoUrl: user.photoUrl || "",
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
         });
         setInput("");

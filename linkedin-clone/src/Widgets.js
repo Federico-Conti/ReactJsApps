@@ -28,7 +28,7 @@ function Widgets() {
             {newArticle("Coronavirus: IT updates","Top news - 886")}
             {newArticle("Tesla hits new hights","Cars & auto -300")}
             {newArticle("Is Redux too good?","Code - 123 renders")}
-            {newArticle("Sky tg24","25 aprile, #Meloni: “La destra in Parlamento è incompatibile con il fascismo")}
+            {newArticle("Falcon Heavy’s","Falcon Heavy’s 27 Merlin engines together generate more than 5 million pounds of thrust at liftoff")}
             {newArticle("Tesla Owners Silicon Valley","The Tesla Roadster and Cybertruck are CGI IRL.")}
             {newArticle("OpenAi","We're launching the OpenAI Bug Bounty Program")}
         </div>

@@ -20,7 +20,7 @@ function Login() {
           email: userAuth.user.email,
           uid: userAuth.user.uid,
           displayName: userAuth.user.displayName,
-          profileUrl: userAuth.user.photoURL,
+          photoUrl: userAuth.user.photoURL,
         }))
       }).catch(error => alert(error));
   };
@@ -36,7 +36,7 @@ function Login() {
         userAuth.user
           .updateProfile({
             displayName: name,
-            photoURL: profilePic,
+            photoUrl: profilePic,
           })
           .then(() => {
             dispatch(
@@ -44,7 +44,7 @@ function Login() {
                 email: userAuth.user.email,
                 uid: userAuth.user.uid,
                 displayName: name,
-                photoURL: profilePic
+                photoUrl: profilePic
               }));
           });
       }).catch(error => alert(error));
