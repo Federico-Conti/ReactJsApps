@@ -1,0 +1,23 @@
+.answer__container {
+    padding: 10px;
+    /* border: 1px solid red; */
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.answer__extracted {
+    /* border: 1px solid red; */
+    padding: 10px;
+    color: black;
+    padding-left: 15px;
+}
+
+.answer__area {
+    padding: 10px;
+}
+
+.answer__options {
+    display: flex;
+    justify-content: space-evenly;
+}

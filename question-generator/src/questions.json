@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "question": "L’ingegneria del software"
+    },
+    {
+      "id": 2,
+      "question": "Modelli di Processo di Sviluppo Software"
+    },
+    {
+      "id": 3,
+      "question": "CODE AND FIX"
+    },
+    {
+      "id": 4,
+      "question": "WATERFALL"
+    },
+    {
+      "id": 5,
+      "question": "V-MODEL"
+    },
+    {
+      "id": 6,
+      "question": "Modelli Evolutivi"
+    },
+    {
+      "id": 7,
+      "question": "MODELLO A SPIRALE"
+    },
+    {
+      "id": 8,
+      "question": "UP – UNIFIED PROCESS"
+    },
+    {
+      "id": 9,
+      "question": "Sviluppo basato sui componenti"
+    }
+
+  ]
