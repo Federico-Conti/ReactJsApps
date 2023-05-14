@@ -29,7 +29,7 @@ function App() {
         <Grid container spacing={3}>
           <Grid item xs >
             <Item >
-              <h4>Da Estrarre</h4>
+              <h4>Questions to be extracted</h4>
               <QuestionsList/>
             </Item>
           </Grid>
@@ -40,7 +40,7 @@ function App() {
           </Grid>
           <Grid item xs>
             <Item>
-              <h4>Estratte</h4>
+              <h4>Questions extract</h4>
               <QuestionsExtractedList />
             </Item>
           </Grid>

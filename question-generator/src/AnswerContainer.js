@@ -48,8 +48,8 @@ function AnswerContainer() {
                 </div>
                 <div className="answer__options">
                     <Stack spacing={2} direction="row">
-                        <Button variant="text" color="primary" onClick={extractQuestion} >Estrai</Button>
-                        <Button variant="text" color="primary" onClick={ResetQuestions}> Riparti</Button>
+                        <Button variant="text" color="primary" onClick={extractQuestion} >Start</Button>
+                        <Button variant="text" color="primary" onClick={ResetQuestions}> Restart</Button>
                     </Stack>
                 </div>
             </Container>

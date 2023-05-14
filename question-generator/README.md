@@ -1,4 +1,13 @@
-# Getting Started with Create React App
+
+## Preview
+
+![Alt Text](./preview.png)
+
+## Design used
+ - **Material UI**: https://mui.com/material-ui
+ 
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
