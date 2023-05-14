@@ -57,5 +57,5 @@ export default function EmptyTextarea() {
     `,
     );
   
-    return <StyledTextarea aria-label="empty textarea" placeholder="Rispondi" />;
+    return <StyledTextarea aria-label="empty textarea" placeholder="Reply" />;
   }
