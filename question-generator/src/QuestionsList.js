@@ -1,14 +1,20 @@
-import React from 'react'
-import questions from './questions.json';
+
+import React, { useContext } from 'react';
+import { Context } from './context'
 import './QuestionsList.css';
+
 import Container from '@mui/material/Container';
+
 function QuestionsList() {
+  
+  const [questionsList,SetQuestionsList] = useContext(Context);
+
   return (
     <div className="questionList__container">
       <Container maxWidth="sm">
         <ol>
-          {questions.map((question) => (
-            <li key={question.id}>{question.question}</li>
+          {questionsList.map((questions) => (
+            <li>{questions.question}</li>
           ))}
         </ol>
       </Container>
