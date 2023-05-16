@@ -5,7 +5,7 @@ import Container from '@mui/material/Container';
 
 
 function QuestionsExtractedList() {
-  const [questionsList, SetQuestionsList, extractedQuestions, SetExtractedQuestions] = useContext(Context);
+  const [questionsList, SetQuestionsList, questionsToBeExtracted, SetQuestionsToBeExtracted, extractedQuestions, SetExtractedQuestions] = useContext(Context);
 
 
 
@@ -13,8 +13,8 @@ function QuestionsExtractedList() {
     <div className="questionExtractedList__container">
       <Container maxWidth="sm">
         <ol>
-        {extractedQuestions.map((questions) => (
-            <li>{questions.question}</li>
+          {extractedQuestions.map((questions) => (
+            <li>{questions}</li>
           ))}
         </ol>
       </Container>

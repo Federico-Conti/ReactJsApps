@@ -6,15 +6,15 @@ import './QuestionsList.css';
 import Container from '@mui/material/Container';
 
 function QuestionsList() {
-  
-  const [questionsList,SetQuestionsList] = useContext(Context);
+
+  const [questionsList, SetQuestionsList, questionsToBeExtracted, SetQuestionsToBeExtracted,] = useContext(Context);
 
   return (
     <div className="questionList__container">
       <Container maxWidth="sm">
         <ol>
-          {questionsList.map((questions) => (
-            <li>{questions.question}</li>
+          {questionsToBeExtracted.map((questions) => (
+            <li>{questions}</li>
           ))}
         </ol>
       </Container>

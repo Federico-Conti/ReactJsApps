@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { Context } from './context';
 import EmptyTextArea from './EmptyTextArea';
 import './AnswerContainer.css';
-import questions from './questions.json'
+// import questions from './questions.json'
 
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
@@ -13,7 +13,7 @@ import Skeleton from '@mui/material/Skeleton';
 
 function AnswerContainer() {
 
-     const [questionsToBeExtracted, SetQuestionsToBeExtracted,extractedQuestions, SetExtractedQuestions] = useContext(Context);
+     const [questionsList, SetQuestionsList,questionsToBeExtracted, SetQuestionsToBeExtracted,extractedQuestions, SetExtractedQuestions] = useContext(Context);
 
     const extractQuestion = () => {
         const questionAux = questionsToBeExtracted;
@@ -33,7 +33,7 @@ function AnswerContainer() {
 
     const ResetQuestions = () => {
         SetExtractedQuestions([]);
-        SetQuestionsToBeExtracted([...questions]);
+         SetQuestionsToBeExtracted([...questionsList]);
     };
 
 
@@ -41,7 +41,7 @@ function AnswerContainer() {
         <div className="answer__container">
             <Container maxWidth="sm">
                 <div className="answer__extracted">
-                    <Typography variant="h5" animation="wave" >{extractedQuestions.length == 0 ? <Skeleton /> : extractedQuestions[extractedQuestions.length-1].question}</Typography>
+                    <Typography variant="h5" animation="wave" >{extractedQuestions.length == 0 ? <Skeleton /> : extractedQuestions[extractedQuestions.length-1]}</Typography>
                 </div>
                 <div className="answer__area">
                     <EmptyTextArea />
