@@ -3,7 +3,7 @@ import QuestionsList from './QuestionsList';
 import QuestionsExtractedList from './QuestionsExtractedList';
 import React, { useEffect, useState, lazy, Suspense } from 'react'
 import { Context } from './context'
-import './App.css';
+import './style/App.css';
 // import questions from './questions.json';
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';

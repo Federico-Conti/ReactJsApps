@@ -1,7 +1,7 @@
 
 import React, { useContext } from 'react';
 import { Context } from './context'
-import './QuestionsList.css';
+import './style/QuestionsList.css';
 
 import Container from '@mui/material/Container';
 

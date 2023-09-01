@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Context } from './context'
-import './QuestionsExtractedList.css';
+import './style/QuestionsExtractedList.css';
 import Container from '@mui/material/Container';
 
 
