@@ -11,6 +11,10 @@ import Typography from '@mui/material/Typography';
 import Skeleton from '@mui/material/Skeleton';
 
 
+//theme factory set in likeColors
+import { ThemeProvider } from '@mui/material/styles';
+import { theme } from './likeColors';
+
 function AnswerContainer() {
 
     const [questionsList, SetQuestionsList, questionsToBeExtracted, SetQuestionsToBeExtracted, extractedQuestions, SetExtractedQuestions] = useContext(Context);
@@ -37,10 +41,12 @@ function AnswerContainer() {
     };
     const NewQuestions = () => {
         SetQuestionsList([]);
-
+        SetQuestionsToBeExtracted([]);
+        SetExtractedQuestions([]);
     };
 
     return (
+
         <div className="answer__container">
             <Container maxWidth="sm">
                 <div className="answer__extracted">
@@ -51,9 +57,9 @@ function AnswerContainer() {
                 </div>
                 <div className="answer__options">
                     <Stack spacing={2} direction="row">
-                        <Button variant="text" color="primary" onClick={extractQuestion} >Start</Button>
-                        <Button variant="text" color="primary" onClick={ResetQuestions}> Restart</Button>
-                        {/* <Button variant="text" color="primary" onClick={NewQuestions}> Upload </Button> */}
+                        <Button variant="text" style={{ color: theme.status.start }} onClick={extractQuestion} >Start</Button>
+                        <Button variant="text" style={{ color: theme.status.restart }} onClick={ResetQuestions}> Restart</Button>
+                        <Button variant="text" style={{ color: theme.status.upload }} onClick={NewQuestions}> Upload </Button>
                     </Stack>
                 </div>
             </Container>

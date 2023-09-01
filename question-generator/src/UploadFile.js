@@ -6,6 +6,11 @@ import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import Tooltip from '@mui/material/Tooltip';
 
+
+//theme factory set in likeColors
+import { ThemeProvider } from '@mui/material/styles';
+import { theme } from './likeColors';
+
 function UploadFile() {
 
     const [questionsList, SetQuestionsList, questionsToBeExtracted, SetQuestionsToBeExtracted, extractedQuestions, SetExtractedQuestions] = useContext(Context);
@@ -44,8 +49,8 @@ function UploadFile() {
                 <label htmlFor="upload-questions">
                     <input style={{ display: "none" }} id="upload-questions" type="file" name="upload-questions" onChange={onChange} />
                     <Fab
-                        color="primary"
-                        size="small"
+                      style={{ backgroundColor: theme.status.uploadFile, color:"white" }}
+                        size="medium"
                         component="span"
                         aria-label="add"
                         variant="extended"

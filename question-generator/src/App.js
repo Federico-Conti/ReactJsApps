@@ -9,6 +9,10 @@ import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import UploadFile from './UploadFile';
+import NavBar from './NavBar';
+
+
+import { theme } from './likeColors';
 
 function App() {
 
@@ -27,21 +31,22 @@ function App() {
 
   return (
     <div className="app">
-      <Context.Provider value={[questionsList,SetQuestionsList,questionsToBeExtracted, SetQuestionsToBeExtracted, extractedQuestions, SetExtractedQuestions]}>
+      <NavBar />
+      <Context.Provider value={[questionsList, SetQuestionsList, questionsToBeExtracted, SetQuestionsToBeExtracted, extractedQuestions, SetExtractedQuestions]}>
         <Grid container spacing={3}>
-          <Grid item xs >
-            <Item >
+          <Grid item xs  >
+            <Item style={{ backgroundColor: theme.status.grid }}>
               <h4>Questions to be extracted</h4>
-              {questionsList.length == 0 ?  <UploadFile /> : <QuestionsList />}
+              {questionsList.length == 0 ? <UploadFile /> : <QuestionsList />}
             </Item>
           </Grid>
           <Grid item xs/*="auto"*/>
-            <Item>
+            <Item style={{ backgroundColor: theme.status.grid }}>
               <AnswerContainer />
             </Item>
           </Grid>
           <Grid item xs>
-            <Item>
+            <Item style={{ backgroundColor: theme.status.grid }}>
               <h4>Questions extract</h4>
               <QuestionsExtractedList />
             </Item>
