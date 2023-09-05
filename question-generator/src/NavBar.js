@@ -14,8 +14,14 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+// import Link from '@mui/material/Link';
+import { Route, Routes, Link } from "react-router-dom"
 
-const pages = ['Tutorial'];
+const pages = [
+    { name: 'Home', url: '/' },
+    { name: 'Tutorial', url: './pages/Tutorial.js' },
+    // Add more objects as needed
+];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function NavBar() {
@@ -91,8 +97,11 @@ function NavBar() {
                                 }}
                             >
                                 {pages.map((page) => (
-                                    <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center">{page}</Typography>
+                                    <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                                        <Link to={page.url} style={{textDecoration: 'none',color: "blue"}}>
+                                            <Typography textAlign="center">{page.name} </Typography>
+                                        </Link>
+
                                     </MenuItem>
                                 ))}
                             </Menu>
@@ -116,23 +125,26 @@ function NavBar() {
                         >
                             Questions.Generator
                         </Typography>
+
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                             {pages.map((page) => (
                                 <Button
-                                    key={page}
+                                    key={page.name}
                                     onClick={handleCloseNavMenu}
                                     sx={{ my: 2, color: 'white', display: 'block' }}
                                 >
-                                    {page}
+                                    <Link to={page.url}  style={{textDecoration: 'none',color: "white"}}>
+                                        {page.name}
+                                    </Link>
                                 </Button>
                             ))}
                         </Box>
 
                         <Box sx={{ flexGrow: 0 }}>
                             <Tooltip title="Pro mode temporarily disabled">
-                                <IconButton  sx={{ p: 0 }} disabled={false}>
+                                <IconButton sx={{ p: 0 }} disabled={false}>
                                     {/* onClick={handleOpenUserMenu} To insert in IconButton */}
-                                    <AccountCircleIcon alt="User"  fontSize='large'/>
+                                    <AccountCircleIcon alt="User" fontSize='large' />
                                 </IconButton>
                             </Tooltip>
                             <Menu

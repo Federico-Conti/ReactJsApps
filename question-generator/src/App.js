@@ -31,7 +31,6 @@ function App() {
 
   return (
     <div className="app">
-      <NavBar />
       <Context.Provider value={[questionsList, SetQuestionsList, questionsToBeExtracted, SetQuestionsToBeExtracted, extractedQuestions, SetExtractedQuestions]}>
         <Grid container spacing={3}>
           <Grid item xs  >
