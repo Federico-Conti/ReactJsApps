@@ -129,8 +129,9 @@ function NavBar() {
                         </Box>
 
                         <Box sx={{ flexGrow: 0 }}>
-                            <Tooltip title="Open settings">
-                                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }} disabled={true}>
+                            <Tooltip title="Pro mode temporarily disabled">
+                                <IconButton  sx={{ p: 0 }} disabled={false}>
+                                    {/* onClick={handleOpenUserMenu} To insert in IconButton */}
                                     <AccountCircleIcon alt="User"  fontSize='large'/>
                                 </IconButton>
                             </Tooltip>

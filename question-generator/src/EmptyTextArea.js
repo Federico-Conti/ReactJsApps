@@ -1,11 +1,8 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useEffect, useState, useContext, useCallback } from 'react'
 import TextareaAutosize from '@mui/base/TextareaAutosize';
 import { styled } from '@mui/system';
-import { TextContext } from './context'
-
 export default function EmptyTextarea() {
 
-  const [textValue, setTextValue] = useContext(TextContext);
 
   const blue = {
     100: '#DAECFF',
@@ -60,10 +57,8 @@ export default function EmptyTextarea() {
     `,
   );
 
-  const handleChange = (event) => {
-    setTextValue(event.target.value);
-  };
 
-  return <StyledTextarea aria-label="empty textarea" placeholder="Reply" defaultValue={textValue}  />;
+
+  return <StyledTextarea aria-label="empty textarea" placeholder="Reply" name="postContent" />;
 }
 

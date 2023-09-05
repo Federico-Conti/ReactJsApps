@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Context, TextContext } from './context';
+import { Context} from './context';
 import EmptyTextArea from './EmptyTextArea';
 import './style/AnswerContainer.css';
 // import questions from './questions.json'
@@ -48,30 +48,45 @@ function AnswerContainer() {
     };
 
 
-    const [textValue, setTextValue] = useState("");
+    // const [textValue, setTextValue] = useState("");
+    function handleSubmit(e) {
+        // // Prevent the browser from reloading the page
+        // e.preventDefault();
 
+        // // Read the form data
+        // const form = e.target;
+        // const formData = new FormData(form);
+
+        // // You can pass formData as a fetch body directly:
+        // fetch('/some-api', { method: form.method, body: formData });
+
+        // // Or you can work with it as a plain object:
+        // const formJson = Object.fromEntries(formData.entries());
+        console.log("formJson");
+    }
     return (
         <div className="answer__container">
 
-            <Container maxWidth="sm">
+            <Container maxWidth="lg">
                 <div className="answer__extracted">
                     <Typography variant="h5" animation="wave" >{extractedQuestions.length == 0 ? <Skeleton /> : extractedQuestions[extractedQuestions.length - 1]}</Typography>
                 </div>
-                <div className="answer__area">
-                    <TextContext.Provider value={[textValue, setTextValue]}>
+
+                <form method="post" onSubmit={handleSubmit}>
+                    <div className="answer__area">
                         <EmptyTextArea />
-                    </TextContext.Provider>
-                </div>
-                <div className="answer__options">
-                    <Stack spacing={2} direction="row">
-                        <Button variant="text" style={{ color: theme.status.start }} onClick={extractQuestion} >Start</Button>
-                        <Button variant="text" style={{ color: theme.status.restart }} onClick={ResetQuestions}> Restart</Button>
-                        <Button variant="text" style={{ color: theme.status.upload }} onClick={NewQuestions}> Upload </Button>
-                        <Button>
-                            <DeleteIcon fontSize='medium' style={{ color: 'red' }} onClick={() => setTextValue("")}></DeleteIcon>
-                        </Button>
-                    </Stack>
-                </div>
+                    </div>
+                    <div className="answer__options">
+                        <Stack spacing={2} direction="row">
+                            <Button variant="text" style={{ color: theme.status.start }} onClick={extractQuestion} >Start</Button>
+                            <Button variant="text" style={{ color: theme.status.restart }} onClick={ResetQuestions}> Restart</Button>
+                            <Button variant="text" style={{ color: theme.status.upload }} onClick={NewQuestions}> Upload </Button>
+                            <Button type='reset'>
+                                <DeleteIcon fontSize='medium' style={{ color: 'red' }} />
+                            </Button>
+                        </Stack>
+                    </div>
+                </form>
             </Container>
         </div>
     )
