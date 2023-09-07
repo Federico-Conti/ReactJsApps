@@ -10,6 +10,7 @@ const theme = createTheme({
         upload: grey[600],
         uploadFile:grey[500],
         grid:lightBlue[50],
+        tutorialGrid:grey[50],
 
     },
 });

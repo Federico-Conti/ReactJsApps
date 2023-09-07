@@ -1,6 +1,18 @@
 .tutorial {
-    background-color: #f3f2ef;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: center; */
+    margin: 10px;
+
+}
+
+.tutorial__steps {
+    margin: 10px;
+    width: "100vh";
+}
+
+.tutorial__about {
+    margin: 10px;
+    text-align: left;
 }

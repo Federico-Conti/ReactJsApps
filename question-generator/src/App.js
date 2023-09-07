@@ -9,8 +9,6 @@ import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import UploadFile from './UploadFile';
-import NavBar from './NavBar';
-
 
 import { theme } from './likeColors';
 
