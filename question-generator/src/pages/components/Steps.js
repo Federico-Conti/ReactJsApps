@@ -87,7 +87,10 @@ function Steps() {
             {
                 activeStep === steps.length && (
                     <Paper square='false' elevation={16} sx={{ p: 1 }} style={{ textAlign: 'left' }}>
-                        <Typography style={{ fontFamily: 'IBM Plex Sans, sans-serif' }}>All steps completed - you&apos;re finished</Typography>
+                        {/* <Typography style={{ fontFamily: 'IBM Plex Sans, sans-serif' }}>All steps completed - you&apos;re finished</Typography> */}
+                        <Button href='/' sx={{ mt: 1, mr: 1 }} style={{ color: theme.status.restart }}>
+                            Try It
+                        </Button>
                         <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }} style={{ color: theme.status.restart }}>
                             Reset
                         </Button>

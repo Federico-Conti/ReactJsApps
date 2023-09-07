@@ -32,18 +32,18 @@ function App() {
       <Context.Provider value={[questionsList, SetQuestionsList, questionsToBeExtracted, SetQuestionsToBeExtracted, extractedQuestions, SetExtractedQuestions]}>
         <Grid container spacing={3}>
           <Grid item xs  >
-            <Item style={{ backgroundColor: theme.status.grid }}>
+            <Item style={{ backgroundColor: theme.status.appGridSide }}>
               <h4>Questions to be extracted</h4>
               {questionsList.length == 0 ? <UploadFile /> : <QuestionsList />}
             </Item>
           </Grid>
           <Grid item xs/*="auto"*/>
-            <Item style={{ backgroundColor: theme.status.grid }}>
+            <Item style={{ backgroundColor: theme.status.appGridCentral }}>
               <AnswerContainer />
             </Item>
           </Grid>
           <Grid item xs>
-            <Item style={{ backgroundColor: theme.status.grid }}>
+            <Item style={{ backgroundColor: theme.status.appGridSide }}>
               <h4>Questions extract</h4>
               <QuestionsExtractedList />
             </Item>
