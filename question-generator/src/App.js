@@ -11,6 +11,7 @@ import Paper from '@mui/material/Paper';
 import UploadFile from './UploadFile';
 
 import { theme } from './likeColors';
+import AdsComponent from './AdsComponent';
 
 function App() {
 
@@ -50,6 +51,8 @@ function App() {
           </Grid>
         </Grid>
       </Context.Provider>
+      <AdsComponent dataAdSlot='X7XXXXXX5X' />
+
     </div>
   );
 }
