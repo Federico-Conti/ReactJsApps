@@ -1,8 +1,10 @@
 
-.card__media{
-    position: relative;
+.card__options{
     margin: auto;
-    width: 350px;
-    height: 300px;
- 
 }
+.card__media{
+    margin: auto;
+    width: 300px;
+    height: 250px;
+}
+

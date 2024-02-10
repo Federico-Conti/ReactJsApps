@@ -8,16 +8,18 @@ import './style/Card.css';
 import Stack from '@mui/material/Stack';
 import GalleryDialog from './GalleryDialog';
 import ContactDialog from './ContactDialog';
-
+import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
+import CssBaseline from '@mui/material/CssBaseline';
 
 export default function MultiActionAreaCard() {
   return (
     <div className="card__container">
+
       <Card sx={{ maxWidth: 500 }} >
-          <Typography  variant="h2" component="div" textAlign={'center'} color="#dd2c00" sx={{ fontWeight: 'bold', fontFamily: 'default', fontStyle: 'italic', letterSpacing: 0, margin:2}}>
-             Sell ! ! ! 
-            </Typography>
+        <Typography variant="h2" component="div" textAlign={'center'} color="#dd2c00" sx={{ fontWeight: 'bold', fontFamily: 'default', fontStyle: 'italic', letterSpacing: 0, margin: 2 }}>
+          Sell ! ! !
+        </Typography>
         <CardActionArea>
           <div className='card__media'>
             <CardMedia
@@ -30,10 +32,10 @@ export default function MultiActionAreaCard() {
             <Typography gutterBottom variant="h5" component="div" textAlign={'center'}>
               <Link href="https://www.dell.com/it-it/shop/monitor-dell-ultrasharp-4k-hub-usb-c-27-u2723qe/apd/210-bcxk/monitor-e-accessori" underline="always">
                 {/* {'underline="none"'} */}
-              Monitor Dell UltraSharp 4K hub USB-C 27 {"\n"} U2723QE
+                Monitor Dell UltraSharp 4K hub USB-C 27 {"\n"} U2723QE
               </Link>
             </Typography>
-            <Typography variant="body1" color="#212121" sx={{  fontSize: 20 }}>
+            <Typography variant="body1" color="#212121" sx={{ fontSize: 20 }}>
               Ciao, sto mettendo in vendita un monitor a causa di un incidente che ha colpito il pannello. <br />
               Il pannello non presenta crepe visibili ma alcuni cristalli liquidi si sono riversati in piccole aree dello schermo.
               <br /><br />
@@ -43,9 +45,14 @@ export default function MultiActionAreaCard() {
           </CardContent>
         </CardActionArea>
 
-        <CardActions>
+
+        <CardActions >
           <div className="card__options">
-            <Stack spacing={13} direction="row">
+            <Stack
+              useFlexGap flexWrap="wrap"
+              direction={{ xs: 'row', sm: 'row' }}
+              spacing={{ xs: 5, sm: 13, md: 13 }}
+            >
               <Button variant="contained" size="small" color="inherit" >
                 <Typography sx={{ fontWeight: 'bold', fontFamily: 'Monospace', fontStyle: 'italic', letterSpacing: 0, fontSize: 20 }} display="block" color="#212121">
                   200 €
@@ -57,6 +64,8 @@ export default function MultiActionAreaCard() {
             </Stack>
           </div>
         </CardActions>
+
+
       </Card>
 
     </div>

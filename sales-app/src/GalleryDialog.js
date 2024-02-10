@@ -55,7 +55,7 @@ function SimpleDialog(props) {
   return (
     <Dialog onClose={handleClose} open={open}>
       {/* <DialogTitle>Set backup </DialogTitle> */}
-      <ImageList sx={{ width: 1100, height: 650 }} cols={3} rowHeight={260}>
+      <ImageList sx={{ width: 'auto', height: 'auto' }} cols={1} rowHeight={'auto'}>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <img
