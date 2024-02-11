@@ -36,11 +36,13 @@ export default function MultiActionAreaCard() {
               </Link>
             </Typography>
             <Typography variant="body1" color="#212121" sx={{ fontSize: 20 }}>
-              Ciao, sto mettendo in vendita un monitor a causa di un incidente che ha colpito il pannello. <br />
-              Il pannello non presenta crepe visibili ma alcuni cristalli liquidi si sono riversati in piccole aree dello schermo.
+              Vendo monitor nuovo con pannello leggermente danneggiato. <br />
+              Il pannello non presenta crepe visibili ma alcuni cristalli liquidi si sono riversati in una piccola area dello schermo. (vedere immagini) <br />
+              <Typography variant="caption" color="#212121" sx={{ fontSize: 15, fontStyle: 'oblique'}}> Scatola e accessori inclusi. </Typography>
               <br /><br />
-              Hi, I am offering a monitor for sale due to an accident that affected the panel.<br />
-              The panel has no visible cracks but some liquid crystals have spilled into small areas of the screen.
+              I am selling a new monitor that has a slightly damaged panel.<br />
+              The screen has no visible cracks, but some liquid crystals have leaked into a small area. (view images) <br />
+              <Typography variant="caption" color="#212121" sx={{ fontSize: 15, fontStyle: 'oblique'}}>The box and accessories are included. </Typography>
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -51,8 +53,9 @@ export default function MultiActionAreaCard() {
             <Stack
               useFlexGap flexWrap="wrap"
               direction={{ xs: 'row', sm: 'row' }}
-              spacing={{ xs: 5, sm: 13, md: 13 }}
+              spacing={{ xs: 2, sm: 13, md: 13 }}
             >
+              
               <Button variant="contained" size="small" color="inherit" >
                 <Typography sx={{ fontWeight: 'bold', fontFamily: 'Monospace', fontStyle: 'italic', letterSpacing: 0, fontSize: 20 }} display="block" color="#212121">
                   200 €
@@ -60,7 +63,8 @@ export default function MultiActionAreaCard() {
               </Button>
               <GalleryDialog></GalleryDialog>
               <ContactDialog></ContactDialog>
-              {/* <Button variant="contained" size="small" color="info" >Contact me </Button> */}
+             
+          
             </Stack>
           </div>
         </CardActions>
