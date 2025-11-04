@@ -58,7 +58,7 @@ export default function MultiActionAreaCard() {
               
               <Button variant="contained" size="small" color="inherit" >
                 <Typography sx={{ fontWeight: 'bold', fontFamily: 'Monospace', fontStyle: 'italic', letterSpacing: 0, fontSize: 20 }} display="block" color="#212121">
-                  200 €
+                  150 €
                 </Typography>
               </Button>
               <GalleryDialog></GalleryDialog>
